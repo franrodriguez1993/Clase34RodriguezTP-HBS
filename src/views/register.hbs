@@ -1,0 +1,29 @@
+<section class="text-center container-sm d-flex flex-column align-items-center">
+
+  <form action="/user/register" method="post">
+    <h3 class="text-center fw-bolder mb-4">Register</h3>
+    <label for="nombre" class="form-label">Email:</label>
+    <input type="text" id="username" class="form-control" name="email" />
+    <label for="nombre" class="form-label">Password:</label>
+    <input type="password" id="password" class="form-control" name="password" />
+    <label for="telefono" class="form-label">telefono:</label>
+    <input type="text" id="telefono" class="form-control" name="telefono" />
+    <label for="nombre" class="form-label">nombre:</label>
+    <input type="text" id="nombre" class="form-control" name="nombre" />
+    <label for="apellido" class="form-label">apellido:</label>
+    <input type="text" id="apellido" class="form-control" name="apellido" />
+    <label for="direccion" class="form-label">direccion:</label>
+    <input type="text" id="direccion" class="form-control" name="direccion" />
+    <label for="edad" class="form-label">edad:</label>
+    <input type="number" id="edad" class="form-control" name="edad" />
+    <label for="avatar" class="form-label">avatar:</label>
+    <input type="text" id="edad" class="form-control" name="avatar" />
+    <button type="submit" class="btn btn-primary m-3">Registrar</button>
+
+  </form>
+  {{#if registermsg}}
+    <div class="alert alert-warning mt-4">
+      {{registermsg}}
+    </div>
+  {{/if}}
+</section>

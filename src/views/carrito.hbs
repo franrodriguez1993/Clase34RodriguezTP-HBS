@@ -1,0 +1,21 @@
+<div class="container-lg d-flex flex-column align-items-center">
+  <h1 class="fw-bolder text-center m-4">Carrito</h1>
+  <section class="container-lg d-flex flex-wrap justify-content-center">
+   {{#if carrito}}
+   {{#each carrito }}
+   
+        {{>rowProductos item = this}}
+      {{/each}}
+      {{else}}
+            <div class="alert alert-warning mt-4">
+  ¡No hay productos agregados!
+</div>
+  {{/if}}
+  </section>
+  {{#if msg}}
+<div class="alert alert-warning" role="alert">
+{{msg}}
+</div>
+  {{/if}}
+  <a href="/carrito/comprar/{{uid}}" class="btn btn-dark">Comprar</a>
+</div>

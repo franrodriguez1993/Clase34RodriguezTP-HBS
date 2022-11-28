@@ -1,0 +1,20 @@
+{{#if user}}
+<div class="container-lg d-flex flex-column align-items-center">
+ <img
+    src="{{user.avatar}}"
+    class="card-img-top mt-3"
+    style="width:10rem;height:10rem;margin:auto;border-radius:50%;object-fit:cover"
+  />
+  <h1> Nombre: {{user.nombre}} {{user.apellido}}</h1>
+  <p>Direccion: {{this.user.direccion}}</p>
+  <p>Telefono: {{this.user.telefono}}</p>
+  <p>Edad: {{this.user.edad}}</p>
+  <p>Email: {{this.user.email}}</p>
+  <a class="btn btn-dark text-center m-4" href="/user/logout">Desloguear</a>
+  <a class="btn btn-success text-center m-4" href="/carrito/">Ver carrito</a>
+{{else}}
+  <h1>Ingresa para ver tu informacion</h1>
+
+{{/if}}
+</div>
+ 

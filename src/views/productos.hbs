@@ -1,0 +1,16 @@
+<div class="container-lg">
+  <h1 class="fw-bolder text-center m-4">Productos</h1>
+  <section class="container-lg d-flex flex-wrap">
+   {{#if productos}}
+   {{#each productos }}
+   
+        {{>rowProductos item = this}}
+      {{/each}}
+      {{else}}
+            <div class="alert alert-warning mt-4">
+  ¡No hay productos agregados!
+</div>
+  {{/if}}
+
+  </section>
+</div>
